@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentRegistration.Reposit
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentRegistration.Service", "StudentRegistration.Service\StudentRegistration.Service.csproj", "{8FFC718B-E6C6-49F0-9465-3F6E9D12D9BF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentRegistration.WebApp", "StudentRegistration.WebApp\StudentRegistration.WebApp.csproj", "{D885A668-06D7-4CE1-893C-CCA8926454C6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +43,10 @@ Global
 		{8FFC718B-E6C6-49F0-9465-3F6E9D12D9BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8FFC718B-E6C6-49F0-9465-3F6E9D12D9BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8FFC718B-E6C6-49F0-9465-3F6E9D12D9BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D885A668-06D7-4CE1-893C-CCA8926454C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D885A668-06D7-4CE1-893C-CCA8926454C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D885A668-06D7-4CE1-893C-CCA8926454C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D885A668-06D7-4CE1-893C-CCA8926454C6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -50,5 +56,6 @@ Global
 		{FE4BD745-D3B0-4B77-AFD7-A3CFAEB44F30} = {746C7F2E-20D4-405B-A761-A77403E9755E}
 		{C4CD208B-BF70-40B2-9369-41C185B33608} = {A5912F40-442A-4EF0-952B-B14993E05299}
 		{8FFC718B-E6C6-49F0-9465-3F6E9D12D9BF} = {BE289EF7-9D84-48F0-9416-719D9A9473C0}
+		{D885A668-06D7-4CE1-893C-CCA8926454C6} = {07D44F3E-AB9A-4D52-8735-4A1336A81C8A}
 	EndGlobalSection
 EndGlobal
