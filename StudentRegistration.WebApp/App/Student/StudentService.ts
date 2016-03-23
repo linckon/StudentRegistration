@@ -6,7 +6,6 @@ module App {
 
         private httpService: angular.IHttpService;
         private qService: angular.IQService;
-
         static $inject: string[] = ["$http", "$q"];
         constructor(private $http: ng.IHttpService, private $q: ng.IQService) {
             this.httpService = $http;
@@ -67,6 +66,14 @@ module App {
             return deffered.promise;
         }
        
+        IsValidPhoneNo(data: number): boolean {
+            var sp: string = data + "";
+            if (sp.length === 10) {
+                return true;
+            }
+            else
+            return false;
+        }
     }
 
     angular.module("app").service("StudentService", StudentService);

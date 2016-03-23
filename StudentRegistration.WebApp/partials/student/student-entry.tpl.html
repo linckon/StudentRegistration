@@ -3,7 +3,7 @@
     <label>Name</label>
     <input type="text" ng-model="vm.Student.Name"/> <br/>
     <label>Phone</label>
-    <input type="number" ng-model="vm.Student.Phone"/><br/>
+    <input type="number" ng-model="vm.Student.Phone"  ng-blur="vm.IsValidPhone(vm.Student.Phone)"/><br/>
     <label>Email</label>
     <input type="text" ng-model="vm.Student.Email" ng-blur="vm.IsEmailExist()"/><br/>
     <label>City</label>

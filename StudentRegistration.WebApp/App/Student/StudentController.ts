@@ -11,6 +11,33 @@
             this.stateService = $state;
         }
 
+        IsValidPhone(phoneNo:number) {
+            var self = this;
+            var isValidPhoneNo = self.studentService.IsValidPhoneNo(phoneNo);
+            if (!isValidPhoneNo) {
+                alert("Pls,enter 11 digit phone no.");
+            }
+            console.log(isValidPhoneNo);
+        }
+
+
+        IsEmailExist() {
+            var self = this;
+
+            var successCallback = result => {
+                console.log(result);
+                if (result.data) {
+                    alert("Already exists !");
+                }
+
+            };
+            var errorCallback = error => {
+                console.log(error);
+            };
+
+            self.studentService.IsEmailExist(self.Student)
+                .then(successCallback, errorCallback);
+        }
         Save() {
             console.log(this.Student);
             var self = this;
@@ -31,23 +58,7 @@
                 .then(successCallback, errorCallback);
         }
 
-        IsEmailExist() {
-            var self = this;
-
-            var successCallback = result => {
-                console.log(result);
-                if (result.data) {
-                    alert("Already exists !");
-                }
-              
-            };
-            var errorCallback = error => {
-                console.log(error);
-            };
-
-            self.studentService.IsEmailExist(self.Student)
-                .then(successCallback, errorCallback);
-        }
+     
     }
 
     angular.module('app').controller('StudentController', StudentController);
