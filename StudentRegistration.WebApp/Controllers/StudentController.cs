@@ -25,8 +25,14 @@ namespace StudentRegistration.WebApp.Controllers
         public IHttpActionResult Add( Student student)
         {
             student.Id = Guid.NewGuid().ToString();
-            string addedId = service.Add(student);
-            return Ok(addedId);
+             if (!service.IsCityDuplicate(student.City))
+             {
+                  string addedId = service.Add(student);
+                  return Ok(true);
+            }
+            else
+                return Ok(false);
+
         }
 
         [HttpPost]

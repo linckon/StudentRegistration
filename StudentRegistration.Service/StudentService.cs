@@ -33,5 +33,10 @@ namespace StudentRegistration.Service
         {
             return repository.GetAll().Any(x => x.Email.Equals(email));
         }
+
+        public bool IsCityDuplicate(string city)
+        {
+            return repository.GetAll().Any(x => x.City.Equals(city));
+        }
     }
 }

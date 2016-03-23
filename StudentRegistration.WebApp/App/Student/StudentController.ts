@@ -17,7 +17,11 @@
 
             var successCallback = result => {
                 console.log(result);
-                self.stateService.go('root.student-list');
+                if (result.data) {
+                    self.stateService.go('root.student-list');
+                } else {
+                    alert("Duplicate city!");
+                }
             };
             var errorCallback = error => {
                 console.log(error);
