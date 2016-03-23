@@ -20,13 +20,18 @@ namespace StudentRegistration.Service
         public List<StudentViewModel> GetAll()
         {
             IQueryable<Student> queryable = repository.GetAll();
-            List<StudentViewModel> list = queryable.Select(x => new StudentViewModel(x)).ToList();
+            List<StudentViewModel> list = queryable.ToList().Select(x => new StudentViewModel(x)).ToList();
             return list;
         }
 
         public string Add(Student student)
         {
             return repository.Add(student);
+        }
+
+        public bool IsEmailExists(string email)
+        {
+            return repository.GetAll().Any(x => x.Email.Equals(email));
         }
     }
 }
